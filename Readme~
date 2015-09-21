@@ -1,0 +1,10 @@
+This is basically a project of website data scripping.
+Resources Used: 
+Ruby
+Nokogiri gems
+CSS selectors
+
+In the file Gettingteamall,
+Firstly I have opened a page from code ranklist.
+I searched through the page of getting my required data.
+Then I have used CSS selectors to get those data and extract them and represent them in a proper format
