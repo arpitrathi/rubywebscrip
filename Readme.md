@@ -12,7 +12,7 @@ Currently it is applicable for a single contest of codechef.
 
 
 To run:
-`ruby Gettingteamall.rb`
+`ruby fetchTeamNames.rb`
 
 ####TODO
 1. To generalize this file for all contest.
