@@ -1,6 +1,7 @@
 require "rubygems"
 require "nokogiri"
-require 'open-uri'
+require "open-uri"
+
 def formattedresults(doc,index)
     
     d1 = doc.css(".rank-table tr")
@@ -11,7 +12,6 @@ def formattedresults(doc,index)
     i = 0
     d1.each do |team|
         if team.text.split("\n").length >=3
-            #puts i.to_s+"\t\t"+team
             team_raw = team.text.split("\n")
             team_name[i] = team_raw[1].strip
             if team_name[2] != nil
@@ -49,7 +49,7 @@ def calling_pages()
     puts "No.\t\tTeam Name\t\tCollege Name\t\tMembers"
     j.times do
     ur = "https://www.codechef.com/teams/list/INSQ2015?page="+i.to_s
-    doc = Nokogiri::HTML(open(ur,:proxy=>"http://172.31.100.85:5869"))
+    doc = Nokogiri::HTML(open(ur,:proxy=>"http://172.31.100.14:3128"))
     formattedresults(doc,i-1)
     i+=1
     end
